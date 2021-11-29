@@ -7,7 +7,7 @@ const images = [
   
   function getImage(img) {
     return `<div class="draggable-item image-box">
-                          <img src="${img.src}" data-image-url="https://www.digitalanimals.de/metaFinTest/${img.src}">
+                          <img src="${img.src}" data-image-url="https://software-fox.github.io/miro-app-test/${img.src}">
               </div>`
   }
   
@@ -69,9 +69,7 @@ const images = [
       },
       onDrop: (canvasX, canvasY, targetElement) => {
         //console.log('onDrop 1')
-        
-        _currentImageUrl = targetElement.getAttribute('data-image-url')
-        createImage(canvasX, canvasY, _currentImageUrl)
+        createImage(canvasX, canvasY, currentImageUrl)
       },
     }
     miro.board.ui.initDraggableItemsContainer(container, imageOptions)
