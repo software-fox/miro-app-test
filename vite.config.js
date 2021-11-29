@@ -7,7 +7,7 @@ module.exports = defineConfig({
     rollupOptions: {
       input: {
         index: path.resolve(__dirname, 'index.html'),
-        app: path.resolve(__dirname, 'app.html'),
+        app: path.resolve(__dirname, 'content.html'),
       },
     },
   },
