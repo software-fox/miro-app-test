@@ -35,7 +35,7 @@ function createImage(canvasX, canvasY, url) {
   })
 }
 
-(
+// (
   function bootstrap() {
   const container1 = document.getElementById('container1')
   const container2 = document.getElementById('container2')
@@ -90,6 +90,6 @@ function createImage(canvasX, canvasY, url) {
   }
   miro.board.ui.initDraggableItemsContainer(container, imageOptions)
 }
-)();
+// )();
 
 miro.onReady(bootstrap)
