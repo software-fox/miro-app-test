@@ -35,11 +35,11 @@ function createImage(canvasX, canvasY, url) {
   })
 }
 
-// (
+//(
   function bootstrap() {
-  const container1 = document.getElementById('container1')
+  // const container1 = document.getElementById('container1')
   const container2 = document.getElementById('container2')
-  const container3 = document.getElementById('container3')
+  // const container3 = document.getElementById('container3')
 
   // console.log(miro.board.widgets.get({type: 'image'}))
   //   if(images.length > 0){
@@ -58,9 +58,9 @@ function createImage(canvasX, canvasY, url) {
   // };
   // printWidgets();
 
-  addImages(container1, images1)
+  // addImages(container1, images1)
   addImages(container2, images2)
-  addImages(container3, images3)
+  // addImages(container3, images3)
 
   let currentImageUrl
   const imageOptions = {
