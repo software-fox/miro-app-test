@@ -1,86 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Card Deck</title>
-    <style>
-      html,
-      body {
-        background-color: #7b0ca7;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
 
-      #container1,
-      #container2,
-      #container3 {
-        /* height: 100%; */
-        overflow-y: auto;
-        overflow-x: hidden;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-items: top;
-        padding-top: 32px;
-        box-sizing: border-box;
-      }
-      #container1 {
-        background-color: #0ca788;
-      }
-      #container2 {
-        background-color: #0c61a7;
-      }
-      #container3 {
-        background-color: #98a70c;
-      }
-      #separator1,
-      #separator2 {
-        background-color: #a70c0c;
-        min-height: 5px;
-      }
+<head>
+  <title>Card Deck</title>
+  <style>
+    html,
+    body {
+      background-color: #7b0ca7;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-      .row {
-        display: flex;
-        flex-direction: row;
-        padding-left: 32px;
-        margin-bottom: 32px;
-      }
+    #container1,
+    #container2,
+    #container3 {
+      /* height: 100%; */
+      overflow-y: auto;
+      overflow-x: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: top;
+      padding-top: 32px;
+      box-sizing: border-box;
+    }
+    #container1 {
+      background-color: #0ca788;
+    }
 
-      .draggable-item {
-        margin-left: 32px;
-        margin-bottom: 32px;
-        width: 112px;
-        height: 112px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        font-size: 18px;
-        font-family: sans-serif;
-      }
+    #container2 {
+      background-color: #0c61a7;
+    }
 
-      .draggable-item.red {
-        background-color: #f24726;
-      }
+    #container3 {
+      background-color: #98a70c;
+    }
 
-      .draggable-item.green {
-        background-color: #0ca788;
-      }
+    #headline1,
+    #headline2,
+    #headline3 {
+      padding: 32px; 
+      height: fit-content;
+      line-height:32px ;
+    }
+    #headline1 {
+      background-color: #096e5a;
+    }
 
-      .image-box img {
-        max-width: 112px;
-        max-height: 112px;
-        cursor: pointer;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="container1"></div>
-    <div id="separator1"></div>
-    <div id="container2"></div>
-    <div id="separator2"></div>
-    <div id="container3"></div>
-    <script src="https://miro.com/app/static/sdk.1.1.js"></script>
-    <script src="js/content.js"></script>
-  </body>
+    #headline2 {
+      background-color: #09385f;
+    }
+
+    #headline3 {
+      background-color: #5a6308;
+    }
+
+    #headline1 h1,
+    #headline2 h1,
+    #headline3 h1{
+      margin: 0;
+    }
+
+    #separator1,
+    #separator2 {
+      background-color: #a70c0c;
+      min-height: 5px;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      padding-left: 32px;
+      margin-bottom: 32px;
+    }
+
+    .draggable-item {
+      margin-left: 32px;
+      margin-bottom: 32px;
+      width: 112px;
+      height: 112px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 18px;
+      font-family: sans-serif;
+    }
+
+    .draggable-item.red {
+      background-color: #f24726;
+    }
+
+    .draggable-item.green {
+      background-color: #0ca788;
+    }
+
+    .image-box img {
+      max-width: 112px;
+      max-height: 112px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="headline1">
+    <h1>Test</h1>
+  </div>
+  <div id="container1"></div>
+  <div id="separator1"></div>
+  <div id="headline2">
+    <h1>Test 1</h1>
+  </div>
+  <div id="container2"></div>
+  <div id="separator2"></div>
+  <div id="headline3">
+    <h1>Test 2</h1>
+  </div>
+  <div id="container3"></div>
+  <script src="https://miro.com/app/static/sdk.1.1.js"></script>
+  <script src="js/content.js"></script>
+</body>
+
 </html>
