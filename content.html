@@ -5,14 +5,16 @@
     <style>
       html,
       body {
+        background-color: #7b0ca7;
         height: 100%;
         margin: 0;
         padding: 0;
       }
 
-      #container {
-        background-color: #0ca788;
-        height: 100%;
+      #container1,
+      #container2,
+      #container3 {
+        /* height: 100%; */
         overflow-y: auto;
         overflow-x: hidden;
         display: flex;
@@ -21,6 +23,20 @@
         align-items: top;
         padding-top: 32px;
         box-sizing: border-box;
+      }
+      #container1 {
+        background-color: #0ca788;
+      }
+      #container2 {
+        background-color: #0c61a7;
+      }
+      #container3 {
+        background-color: #98a70c;
+      }
+      #separator1,
+      #separator2 {
+        background-color: #a70c0c;
+        min-height: 5px;
       }
 
       .row {
@@ -59,7 +75,11 @@
     </style>
   </head>
   <body>
-    <div id="container"></div>
+    <div id="container1"></div>
+    <div id="separator1"></div>
+    <div id="container2"></div>
+    <div id="separator2"></div>
+    <div id="container3"></div>
     <script src="https://miro.com/app/static/sdk.1.1.js"></script>
     <script src="js/content.js"></script>
   </body>

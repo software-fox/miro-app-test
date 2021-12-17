@@ -1,26 +1,29 @@
-// const images = [
-//     {src: 'img/animals_date.png', width: 256, height: 256},
-//     {src: 'img/animals_dave.png', width: 256, height: 256},
-//     {src: 'img/animals_toba.png', width: 256, height: 256},
-//     {src: 'img/logo_512.png', width: 256, height: 256},
-//   ]
+const images1 = [
+    {src: 'img/Challenge_Kunde_1_1@2.png', width: 256, height: 256},
+    {src: 'img/Challenge_Partner_1_1@2.png', width: 256, height: 256}
+  ]
 
+const images2 = [
+    {src: 'img/Insp_1_1_Bitcoin@2.png', width: 256, height: 256},
+    {src: 'img/Insp_1_1_Interferenz@2.png', width: 256, height: 256},
+    {src: 'img/Insp_1_1_Wolke@2.png', width: 256, height: 256}
+]
+
+  const images3 = [
+    {src: 'img/Abdecker_PartyFrage@2.png', width: 256, height: 256},
+    {src: 'img/Mitspieler_Clean@2.png', width: 256, height: 256},
+    {src: 'img/Start_Kopf@2x.png', width: 256, height: 256}
+  ]
+    
 function getImage(img) {
   return `<div class="draggable-item image-box">
                           <img src="${img.src}" data-image-url="https://software-fox.github.io/miro-app-test/${img.src}">
               </div>`
 }
 
-function addImages(container) {
-  const fs = require('fs')
-
-  const dir = '/img'
-  const files = fs.readdirSync(dir)
-
-  for (const file of files) {
-    console.log(file)
-  }
-  container.innerHTML += files.map((i) => getImage(i)).join('')
+function addImages(container, images) {
+  console.log(images)
+  container.innerHTML += images.map((i) => getImage(i)).join('')
 }
 
 function createImage(canvasX, canvasY, url) {
@@ -32,8 +35,11 @@ function createImage(canvasX, canvasY, url) {
   })
 }
 
-function bootstrap() {
-  const container = document.getElementById('container')
+//(
+  function bootstrap() {
+  const container1 = document.getElementById('container1')
+  const container2 = document.getElementById('container2')
+  const container3 = document.getElementById('container3')
 
   // console.log(miro.board.widgets.get({type: 'image'}))
   //   if(images.length > 0){
@@ -52,7 +58,9 @@ function bootstrap() {
   // };
   // printWidgets();
 
-  addImages(container)
+  addImages(container1, images1)
+  addImages(container2, images2)
+  addImages(container3, images3)
 
   let currentImageUrl
   const imageOptions = {
@@ -82,5 +90,6 @@ function bootstrap() {
   }
   miro.board.ui.initDraggableItemsContainer(container, imageOptions)
 }
+//)();
 
 miro.onReady(bootstrap)
